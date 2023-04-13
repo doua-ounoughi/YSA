@@ -1,3 +1,4 @@
+#SORU 5.4
 #CPU time
 import torch.nn as nn
 import torch.optim as optim
