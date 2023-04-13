@@ -1,9 +1,28 @@
-import torch
 import torch.nn as nn
+import torch.optim as optim
+import torch
 import torch.optim as optim
 import numpy as np
 import pandas as pd
-
+import matplotlib.pyplot as plt
+import time
+class MLP(nn.Module):
+    def __init__(self, input_size, hidden_size1, hidden_size2, output_size):
+        super(MLP, self).__init__()
+        self.hl1 = nn.Linear(input_size, hidden_size1)
+        self.relu1 = nn.ReLU()
+        self.hl2 = nn.Linear(hidden_size1, hidden_size2)
+        self.relu2 = nn.ReLU()
+        self.out = nn.Linear(hidden_size2, output_size)
+        self.sigmoid = nn.Sigmoid()
+    def forward(self, x):
+        output = self.hl1(x)
+        output = self.relu1(output)
+        output = self.hl2(output)
+        output = self.relu2(output)
+        output = self.out(output)
+        output = self.sigmoid(output)
+        return output
 #Veri setlerini oku
 training_dataset = pd.read_csv('cure_the_princess_train.csv')
 validation_dataset = pd.read_csv('cure_the_princess_validation.csv')
