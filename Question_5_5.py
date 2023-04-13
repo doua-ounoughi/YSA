@@ -43,10 +43,10 @@ SEED = 180401119
 torch.manual_seed(SEED)
 # input, hidden layerlerin ve output layerin boyutlarını belirle
 input_size = training_data.size()[1] 
-hidden_size1 = 300
-hidden_size2 = 200
+hidden_size1 = 200
+hidden_size2 = 100
 output_size = 2 
-patience = 10
+
 
 #Modeli oluştur
 model = MLP(input_size, hidden_size1, hidden_size2, output_size)
@@ -57,10 +57,10 @@ optimizer = optim.SGD(model.parameters(), lr=0.0001)
 
 # batch size ve epoch sayısını belirle
 batch_size = 32
-num_epochs = 100
+num_epochs = 5000
 
 # Early stopping degiskenleri
-patience = 10
+patience = 1000
 best_val_loss = float('inf')
 best_model = None
 counter = 0
