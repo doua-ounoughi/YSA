@@ -1,7 +1,6 @@
 import torch.nn as nn
 import torch.optim as optim
 import torch
-import torch.optim as optim
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
