@@ -131,3 +131,4 @@ print("Accuracy:", accuracy*100)
 print("Precision:", precision*100)
 print("Recall:", recall*100)
 print("F1 Score:", f1*100)
+# RESULTS: Accuracy: 76.81347150259067, Precision: 74.35897435897436, Recall: 82.21649484536083, F1 Score: 78.0905752753978
