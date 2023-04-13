@@ -1,3 +1,4 @@
+# SORU 5.1 ve 5.2
 import torch.nn as nn
 import torch.optim as optim
 import torch
