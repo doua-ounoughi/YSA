@@ -1,7 +1,8 @@
+#SORU 4
 import torch
 
 X = torch.tensor([[1, 2, 3], [4, 5, 6]],dtype=torch.float)
-# Aktivasyon fonksiyonlarını tanımlayalım
+# Aktivasyon fonksiyonlarini tanımla
 def tanh_act(x):
     return (torch.exp(x) - torch.exp(-x)) / (torch.exp(x) + torch.exp(-x))
 
